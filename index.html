@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Change Notice</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F5F4EF;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .notice {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            color: #0066cc; /* Updated header color for better contrast */
+        }
+
+        strong {
+            color: #339966;
+        }
+
+        a {
+            color: #990099;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #cc0099;
+        }
+
+        .countdown {
+            font-size: 36px;
+            color: #ff0000;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="notice">
+    <h1>Exciting News!</h1>
+    <p>We have upgraded our domain from <s>strikethrough24.com</s> to <strong>strikethroughdms.com</strong>.</p>
+    <p>You will be redirected to <a href="https://strikethroughdms.com">https://strikethroughdms.com</a> shortly...</p>
+    <div class="countdown" id="countdown">3</div>
+</div>
+
+<script>
+    let seconds = 3;
+
+    function countdown() {
+        const countdownElement = document.getElementById('countdown');
+        countdownElement.textContent = seconds;
+
+        if (seconds > 0) {
+            seconds--;
+            setTimeout(countdown, 1000);
+        } else {
+            window.location.href = 'https://strikethroughdms.com';
+        }
+    }
+
+    countdown();
+</script>
+
+</body>
+</html>
